@@ -31,8 +31,6 @@ body{
     padding-top: 15vh;
     padding-left: 8vw;
     z-index: 999;
-
-    display: none;
 }
 .load{
     /* background-color: red; */
