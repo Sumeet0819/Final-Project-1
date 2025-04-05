@@ -36,7 +36,7 @@ function loadingAnimation() {
     var tl = gsap.timeline()
 
     tl.from(".load h1,.load h2", {
-        y: 120,
+        y: 150,
         duration: 0.7,
         delay: 0.2,
         stagger: 0.2
@@ -51,7 +51,7 @@ function loadingAnimation() {
         duration: 1,
         ease: "power4.out"
     })
-    tl.from(".text h1", {
+    tl.from(".text h1 ,.text-2 h2", {
         y: 200,
         opacity: 0,
         stagger: {
@@ -78,6 +78,26 @@ function loadingAnimation() {
 
 }
 loadingAnimation()
+function flaganimation(){
+    var flag = document.querySelector(".text-2")
+    flag.addEventListener("mouseenter",function(){
+        gsap.to(".flag",{
+            opacity:1
+        })
+    })
+    flag.addEventListener("mouseleave",function(){
+        gsap.to(".flag",{
+            opacity:0
+        })
+    })
+   flag.addEventListener("mousemove",function(dets){
+        gsap.to(".flag",{
+          left: dets.x,
+          top: dets.y,
+        })  
+      })
+}
+flaganimation();
 
 function page2Animation() {
 
